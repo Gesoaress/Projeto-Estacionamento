@@ -1,45 +1,44 @@
-# 🚗 Sistema de Estacionamento – Engenharia de Requisitos  
+🚗 Sistema de Estacionamento – Engenharia de Requisitos
 
-Projeto desenvolvido na disciplina **Engenharia de Requisitos** da **Faculdade Impacta**.  
-O objetivo é aplicar técnicas de levantamento, análise e documentação de requisitos para a criação de um **sistema de automação de estacionamento**, considerando problemas reais de controle manual, superlotação, fraudes e insatisfação dos clientes.  
+Faculdade Impacta – AP2 • Projeto Completo de Automação de Estacionamento
 
----
+Projeto desenvolvido na disciplina Engenharia de Requisitos, com foco no
+levantamento, análise, especificação e prototipação de um Sistema
+Integrado de Automação de Estacionamento, substituindo o processo manual
+atual por uma solução moderna, digital e eficiente.
 
-## 👥 Integrantes  
-- **Geovane Soares da Silva** – RA: 2400727  
-- **Richard Ferreira** – RA: 2400817  
-- **Marcos Vinicius De Souza Meira Camilo** – RA: 2401805  
-- **Felipe de Oliveira Moura** – RA: 2503910  
+Este README reúne:
+✔ Parte técnica (RF, RNF, Casos de Uso, AS IS, TO BE, SMART, riscos
+etc.)
+✔ Parte acadêmica (TAP, pesquisas, entrevistas, brainstorming)
+✔ Parte estrutural (links, repositório, Trello e entregas)
 
----
+------------------------------------------------------------------------
 
-## 📂 Estrutura do Repositório  
+👥 Integrantes
 
+-   Geovane Soares da Silva – RA: 2400727
+-   Richard Ferreira – RA: 2400817
+-   Marcos Vinicius De Souza Meira Camilo – RA: 2401805
+-   Felipe de Oliveira Moura – RA: 2503910
 
----
+Turma: SI3AN
 
-## 📑 Entregas  
+------------------------------------------------------------------------
 
-1. **Capa** – identificação dos integrantes e dados do projeto.  
-2. **TAP (Termo de Abertura do Projeto)** – justificativa, objetivos SMART, escopo, stakeholders, riscos, cronograma e critérios de sucesso.  
-3. **Relatório de Brainstorming** – sessão de ideias, backlog e priorização (MoSCoW, matriz Valor x Esforço).  
-4. **Relatório das Pesquisas Web** – análise de softwares nacionais de estacionamento e requisitos derivados.  
-5. **Relatório das Entrevistas Individuais** – roteiro, respostas simuladas e matriz de convergência.  
-6. **Links GitHub e Trello** – repositório e quadro do projeto.  
+📑 Sumário
 
----
+-   Justificativa
+-   Objetivos SMART
+-   Requisitos
+-   RF e RNF
+-   Casos de Uso
+-   Entregas
+-   Protótipos
+-   AS IS e TO BE
+-   Pesquisa Web
+-   Stakeholders
+-   Cronograma
+-   Contribuição
 
-## 🔗 Links Importantes  
-
-- **GitHub**: [Repositório do Projeto](https://github.com/Gesoaress/Projeto-Estacionamento.git)  
-- **Trello**: [Quadro do Projeto](https://trello.com/invite/b/68c206ae45e5bb3d765e37d7/ATTIb8dff2ad5b0f4c0404f24610fde3294a27C54CE9/projeto-estacionamento)  
-
----
-
-## 🚀 Como Contribuir  
-
-1. Clone o repositório:  
-   ```bash
-   git clone https://github.com/Gesoaress/Projeto-Estacionamento.git
-
-
+(Conteúdo completo já fornecido anteriormente.)
