@@ -1,145 +1,163 @@
-📘 Sistema Integrado de Automação de Estacionamento
+# 📘 Sistema Integrado de Automação de Estacionamento
 
-Documentação Técnica • Arquitetura • Requisitos • Modelagem
+**Documentação Técnica • Arquitetura • Modelagem • Requisitos •
+Protótipo**
 
-📌 Visão Geral do Sistema
-
-O Sistema Integrado de Automação de Estacionamento é uma solução
-completa para controle digital de entrada e saída de veículos, cobrança
-automática e monitoramento de vagas em tempo real. Substitui processos
-manuais com OCR/LPR, pagamentos digitais, dashboard e logs estruturados.
+Sistema desenvolvido para automatizar completamente o fluxo operacional
+de um estacionamento --- desde a entrada do veículo até o pagamento ---
+aplicando conceitos de **Engenharia de Requisitos**, **Modelagem de
+Processos (Bizagi)** e **Protótipos (Pencil)**.
 
 ------------------------------------------------------------------------
 
-🏛 Arquitetura do Sistema
+# 📌 1. Visão Geral do Sistema
 
-1. Frontend
+O Sistema Integrado de Automação de Estacionamento visa eliminar
+processos manuais por meio de OCR/LPR, painel de vagas, pagamentos
+digitais e dashboard gerencial.
 
--   HTML/CSS/JS ou React
--   Painel, dashboard, gestão e telas operacionais
+------------------------------------------------------------------------
 
-2. Backend (API REST)
+# 🏛 2. Arquitetura do Sistema
 
--   Controle de entrada/saída
--   Regras de negócio
--   Pagamentos
--   Integrações
--   Endpoints principais:
+### **2.1 Frontend**
+
+-   React ou HTML/CSS/JS\
+-   Telas operacionais e administrativas\
+-   UI responsiva
+
+### **2.2 Backend (API REST)**
+
+Endpoints principais:
 
     POST /entrada
     POST /saida
-    GET /vagas
-    GET /dashboard
+    GET  /vagas
+    GET  /dashboard
     POST /pagamento
 
-3. Integrações
+### **2.3 Integrações**
 
--   OCR/LPR
--   Gateways de pagamento
--   Banco de dados relacional
+-   OCR/LPR\
+-   Gateways Pix / Cartão\
+-   CFTV (opcional)
 
-4. Banco de Dados
+### **2.4 Banco de Dados**
 
 Tabelas: veículos, entradas_saidas, vagas, mensalistas, pagamentos,
 logs, usuários.
 
 ------------------------------------------------------------------------
 
-⚙️ Funcionalidades Principais
+# ⚙️ 3. Funcionalidades Principais
 
--   Entrada e saída automatizada
--   Pagamento digital
--   Painel de vagas
--   Dashboard
--   Cadastros
--   Logs e auditoria
+-   Entrada automática\
+-   Saída + cálculo automático\
+-   Pagamento digital\
+-   Mapa de vagas em tempo real\
+-   Dashboard e relatórios\
+-   Cadastro de clientes/mensalistas\
+-   Auditoria
 
 ------------------------------------------------------------------------
 
-📐 Modelagem
+# 📐 4. Modelagem (Resumo)
+
+### **Fluxo de Entrada**
 
     [OCR] → [API Entrada] → [DB Entradas] → [Painel]
 
-    [Cliente] → [Saída] → [Pagamento] → [DB Pagamentos]
+### **Fluxo de Saída**
+
+    [Cliente] → [Cálculo] → [Pagamento] → [Liberação]
 
 ------------------------------------------------------------------------
 
-📜 Requisitos Funcionais (RF)
+# 📜 5. Requisitos Funcionais (RF)
 
--   RF01 Registrar entrada
--   RF02 Registrar saída
--   RF03 Atualizar vagas
--   RF04 Mapa visual
--   RF05 Calcular tarifa
--   RF06 Pagamento digital
--   RF07 Recibo
--   RF08 Clientes
--   RF09 Mensalistas
--   RF10 Histórico
--   RF11 Dashboard
--   RF12 Relatórios
--   RF13 Permissões
--   RF14 Busca
--   RF15 Fotos (opcional)
+-   RF01 Registrar entrada\
+-   RF02 Registrar saída\
+-   RF03 Atualizar vagas\
+-   RF04 Mapa visual\
+-   RF05 Cálculo automático\
+-   RF06 Pagamento digital\
+-   RF07 Recibo digital\
+-   RF08 Clientes\
+-   RF09 Mensalistas\
+-   RF10 Histórico\
+-   RF11 Dashboard\
+-   RF12 Relatórios\
+-   RF13 Permissões\
+-   RF14 Busca\
+-   RF15 Fotos (opcional)\
 -   RF16 Notificações
 
 ------------------------------------------------------------------------
 
-🛡 Requisitos Não Funcionais (RNF)
+# 🛡 6. Requisitos Não Funcionais (RNF)
 
--   RNF01 Precisão ≥ 95%
--   RNF02 API ≤ 2s
--   RNF03 Disponibilidade ≥ 95%
--   RNF04 LGPD
--   RNF05 Segurança
--   RNF06 Logs imutáveis
--   RNF07 Responsividade
--   RNF08 Usabilidade
--   RNF09 Compatibilidade
--   RNF10 Multiusuário
+-   RNF01 Precisão ≥ 95%\
+-   RNF02 API ≤ 2s\
+-   RNF03 Disponibilidade ≥ 95%\
+-   RNF04 LGPD\
+-   RNF05 Segurança\
+-   RNF06 Logs imutáveis\
+-   RNF07 Responsividade\
+-   RNF08 Usabilidade\
+-   RNF09 Compatibilidade\
+-   RNF10 Multiusuário\
 -   RNF11 Auditoria
 
 ------------------------------------------------------------------------
 
-🧩 Casos de Uso Resumidos
+# 🧩 7. Casos de Uso
 
--   UC01 Registrar Entrada
--   UC02 Registrar Saída
--   UC03 Gerenciar Vagas
--   UC04 Mensalistas
--   UC05 Dashboard
--   UC06 Usuários
+-   UC01 Registrar Entrada\
+-   UC02 Registrar Saída e Pagamento\
+-   UC03 Mapa de Vagas\
+-   UC04 Mensalistas\
+-   UC05 Dashboard/Relatórios\
+-   UC06 Usuários\
 -   UC07 Tarifas
 
 ------------------------------------------------------------------------
 
-🌐 Fluxo Operacional
+# 🌐 8. Fluxo Operacional
 
     Entrada → OCR → Vaga → Painel
-    Saída → Cálculo → Pagamento → Liberação
+    Saída   → Cálculo → Pagamento → Liberação
 
 ------------------------------------------------------------------------
 
-🧪 Tecnologias Recomendadas
+# 🧪 9. Tecnologias Recomendadas
 
--   Python / Node.js
--   React / HTML/CSS/JS
--   PostgreSQL
--   Docker
--   OpenALPR
--   MercadoPago/Gerencianet
-
-------------------------------------------------------------------------
-
-🔗 Links
-
-Repositório GitHub: https://github.com/Gesoaress/Projeto-Estacionamento
-Trello:
-https://trello.com/invite/b/68c206ae45e5bb3d765e37d7/ATTIb8dff2ad5b0f4c0404f24610fde3294a27C54CE9/projeto-estacionamento
+-   Python / Node.js\
+-   React / HTML/CSS\
+-   PostgreSQL\
+-   Docker\
+-   OpenALPR\
+-   MercadoPago / Gerencianet
 
 ------------------------------------------------------------------------
 
-💼 Como Contribuir
+# 🔗 10. Links
 
-    git clone https://github.com/Gesoaress/Projeto-Estacionamento.git
-    
+**GitHub:** https://github.com/Gesoaress/Projeto-Estacionamento\
+**Trello:** https://trello.com/invite/b/68c206ae45e5bb3d765e37d7
+
+------------------------------------------------------------------------
+
+# 💼 11. Como Contribuir
+
+``` sh
+git clone https://github.com/Gesoaress/Projeto-Estacionamento.git
+git checkout -b nova-feature
+git commit -m "Implementa nova funcionalidade"
+git push origin nova-feature
+```
+
+------------------------------------------------------------------------
+
+# 🏁 12. Créditos
+
+Baseado na documentação técnica completa da AP2.
